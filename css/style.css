@@ -43,6 +43,14 @@
   font-size: 18px;
 }
 
+.verde {
+  background-color: lightgreen;
+}
+
+.bianco {
+  background-color: #fff;
+}
+
 .transform {
   position: absolute;
   top: 50%;
@@ -206,10 +214,27 @@
   line-height: 30px;
 }
 
+/* STORIA DEI MESSAGGI INVIATI E ARRIVATI */
 .elenco_messaggi {
   width: 100%;
   height: calc(100% - 100px);
   background-image: url(../img/mine.jpg);
+}
+
+.mex_arrivati, .mex_inviati {
+  width: 50%;
+  height: 100%;
+  border: 2px solid blue;
+  border-radius: 5px;
+  padding: 20px 40px;
+  float: left;
+}
+
+.box_messaggio {
+  max-width: 350px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
 }
 
 /* Controller della chat */
