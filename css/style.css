@@ -4,6 +4,7 @@
   margin: 0;
 }
 
+/* Sfondo della pagina */
 .sfondo {
   height: 100vh;
 }
@@ -20,6 +21,7 @@
   z-index: -1;
 }
 
+/* Schermata principale */
 .schermata {
   width: 80vw;
   height: 90vh;
@@ -27,4 +29,18 @@
   position: absolute;
   top: 5vh;
   left: 10vw;
+}
+
+/* Sezione sinistra */
+.left_side {
+  width: 35%;
+  height: 100%;
+  background-color: blue;
+}
+
+/* Sezione destra */
+.right_side {
+  width: 65%;
+  height: 100%;
+  background-color: lightblue;
 }
