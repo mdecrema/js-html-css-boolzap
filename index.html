@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Boolzap</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
@@ -29,14 +30,16 @@
         </div>
         <!-- Avviso attivazione notifiche -->
         <div class="avviso_notifiche">
-          <img class="" src="" />
-          <h5></h5>
-          <h6><a href=""></a></h6>
+          <div class="circle inline_bl">
+            <i class="fas fa-bell-slash transform bell"></i>
+          </div>
+          <h5 class="inline_bl">Ricevi notifiche di nuovi messaggi</h5>
+          <h6><a href="">Attiva notifiche desktop</a></h6>
         </div>
         <!-- Cerca chat -->
         <div class="cerca_chat">
-          <label id="trova_chat" type="submit" name="trova_chat"></label>
-          <input id="trova chat" type="text" name="trova_chat" placeholder="Cerca o inizia una nuova chat" />
+          <button id="trova_chat" type="button"><i class="fas fa-search lente"></i></button>
+          <input id="nome_contatto" type="text" name="trova_chat" placeholder="Cerca o inizia una nuova chat" />
         </div>
         <!-- Lista chat -->
         <div class="lista_chat">
