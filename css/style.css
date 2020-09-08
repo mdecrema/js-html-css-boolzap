@@ -237,6 +237,13 @@
   border-radius: 5px;
 }
 
+.box_messaggio::after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
 /* Controller della chat */
 .controller_chat {
   width: 100%;
