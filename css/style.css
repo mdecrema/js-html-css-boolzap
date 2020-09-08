@@ -36,6 +36,32 @@
   width: 35%;
   height: 100%;
   background-color: blue;
+  float: left;
+}
+
+.profilo {
+  width: 100%;
+  height: 50px;
+  background-color: darkgrey;
+  border-right: 1px solid grey;
+}
+
+.avviso_notifiche {
+  width: 100%;
+  height: 70px;
+  background-color: aqua;
+}
+
+.cerca_chat {
+  width: 100%;
+  height: 35px;
+  background-color: #fff;
+}
+
+.lista_chat {
+  width: 100%;
+  height: calc(100% - 155px);
+  background-color: pink;
 }
 
 /* Sezione destra */
@@ -43,4 +69,35 @@
   width: 65%;
   height: 100%;
   background-color: lightblue;
+  float: left;
+}
+
+.info_chat {
+  width: 100%;
+  height: 50px;
+  background-color: yellow;
+}
+
+.elenco_messaggi {
+  width: 100%;
+  height: calc(100% - 100px);
+  background-color: lightgreen;
+}
+
+/* Controller della chat */
+.controller_chat {
+  width: 100%;
+  height: 50px;
+  background-color: red;
+}
+
+/* Input di testo per inviare i messaggi */
+#testo {
+  width: 80%;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 10%;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
