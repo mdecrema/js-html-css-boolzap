@@ -5,7 +5,7 @@
 }
 
 /* Classi generiche */
-.circle {
+.circle, .avatar {
   width: 45px;
   height: 45px;
   border: 1px solid #fff;
