@@ -5,7 +5,7 @@ $(document).ready(function() {
     inviaMessaggio();
   });
 
-  btnMex.keypress(function(event) {
+  $(".txt-mex").keypress(function(event) {
     console.log(event.keyCode);
     if (event.which == 13) {
       inviaMessaggio();
