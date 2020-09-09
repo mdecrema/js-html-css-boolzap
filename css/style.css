@@ -20,7 +20,7 @@
 .square {
   width: calc(10% - 4px);
   height: 100%;
-  background-color: orange;
+  background-color: #F3EEEA;
   position: relative;
   vertical-align: middle;
 }
@@ -35,11 +35,11 @@
 
 .emoticon, .micro, .airplane {
   font-size: 18px;
-  color: grey;
+  color: #6B7376;
 }
 
 .bell {
-  color: aqua;
+  color: #8EDAFC;
   font-size: 18px;
 }
 
@@ -69,13 +69,13 @@
 
 .green_bar {
   height: calc(100% - 85%);
-  background-color: green;
+  background-color: #009688;
   z-index: -1;
 }
 
 .grey {
   height: 85%;
-  background-color: grey;
+  background-color: #DBDBD2 ;
   z-index: -1;
 }
 
@@ -100,7 +100,7 @@
 .profilo {
   width: 100%;
   height: 50px;
-  background-color: darkgrey;
+  background-color: #EAEAEA;
   border-right: 1px solid grey;
   padding: 5px 10px;
 }
@@ -112,7 +112,7 @@
 .profilo ul li {
   display: inline-block;
   list-style: none;
-  color: grey;
+  color: #B1B1B1;
   padding: 5px;
   line-height: 30px;
 }
@@ -120,14 +120,14 @@
 .avviso_notifiche {
   width: 100%;
   height: 70px;
-  background-color: aqua;
+  background-color: #8EDAFC;
   padding: 15px 15px;
 }
 
 .cerca_chat {
   width: 100%;
   height: 35px;
-  background-color: lightgrey;
+  background-color: #FAFAFA;
   padding: 5px;
 }
 
@@ -161,45 +161,54 @@
 .prev_contatto {
   width: 100%;
   height: 60px;
-  background-color: lightgrey;
+  background-color: #fff;
   padding: 10px 10px;
 }
 
 .prev_contatto:hover {
-  background-color: darkgrey;
+  background-color: #E9EBEB;
 }
 
 .nome_contatto {
   width: 250px;
   height: 100%;
-  background-color: violet;
+  background-color: transparent;
   float: left;
+}
+
+.nome_contatto h6 {
+  color: #C6C9CA;
 }
 
 .ora {
   width: 40px;
   height: 100%;
-  background-color: purple;
+  background-color: transparent;
   float: left;
 }
 
 .ora h6 {
   float: right;
+  color: #C6C9CA;
 }
 
 /* Sezione destra */
 .right_side {
   width: 65%;
   height: 100%;
-  background-color: lightblue;
+  background-color: transparent;
   float: left;
 }
 
 .info_chat {
   width: 100%;
   height: 50px;
-  background-color: yellow;
+  background-color: #EAEAEA;
   padding: 5px 10px 5px 10px;
+}
+
+.info_chat h6 {
+  color: darkgrey;
 }
 
 .info_chat ul {
@@ -209,7 +218,7 @@
 .info_chat ul li {
   display: inline-block;
   list-style: none;
-  color: grey;
+  color: #B1B1B1;
   padding: 5px;
   line-height: 30px;
 }
@@ -219,17 +228,10 @@
   width: 100%;
   height: calc(100% - 100px);
   background-image: url(../img/mine.jpg);
+  overflow-y: scroll;
 }
 
-.mex_arrivati, .mex_inviati {
-  width: 50%;
-  height: 100%;
-  border: 2px solid blue;
-  border-radius: 5px;
-  padding: 20px 40px;
-  float: left;
-}
-
+/* Layout box messaggio */
 .box_messaggio {
   max-width: 350px;
   padding: 10px;
@@ -237,18 +239,11 @@
   border-radius: 5px;
 }
 
-.box_messaggio::after {
-  content: "";
-  display: table;
-  clear: both;
-
-}
-
 /* Controller della chat */
 .controller_chat {
   width: 100%;
   height: 50px;
-  background-color: red;
+  background-color: #F3EEEA;
 }
 
 /* Input di testo per inviare i messaggi */
