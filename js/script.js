@@ -13,12 +13,12 @@ $(document).ready(function() {
   });
 
   function inviaMessaggio() {
-    var templateMex = $(".template .box_messaggio").clone();
+    var templateMex = $(".template .messaggi").clone();
     var txtMex = $(".txt-mex").val();
     if (txtMex != "") {
       templateMex.find(".text").text(txtMex);
       templateMex.addClass("right");
-      $(".elenco_messaggio").append(templateMex);
+      $(".elenco_messaggi").append(templateMex);
     } else {
       console.log("err");
     }
