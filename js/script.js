@@ -9,15 +9,11 @@ $(document).ready(function() {
   tastoInvio();
   });
 
+  // Evento sul tasto 'Invio'
   function tastoInvio() {
-    var check = false;
     if (event.which == 13) {
       inviaMessaggio();
-      check = true;
-    } else {
-      check = false;
     }
-    return check;
   };
 
   // Funzione che invia il messaggio
@@ -27,6 +23,7 @@ $(document).ready(function() {
       if (txtMex != "") {
         // Trovo gli elementi a cui stampare messaggio e ora
         templateMex.find(".text").text(txtMex);
+        // L'elemento 'ora-chat' richiama la 'funzione ora()'
         templateMex.find(".ora-chat").text(ora());
 
         templateMex.addClass("right");
@@ -44,6 +41,7 @@ $(document).ready(function() {
   function risposta() {
     var templateMex = $(".template .messaggi").clone();
     templateMex.find(".text").text("ok");
+    templateMex.find(".ora-chat").text(ora());
     $(".elenco_messaggi").append(templateMex);
   };
 
@@ -57,8 +55,20 @@ $(document).ready(function() {
   };
 
   $(".lente").click(function() {
-    ora();
+    trovaContatto();
   });
+
+  function trovaContatto() {
+    var lettere = $(".txt-cerca").val();
+    var elencoContatti = ["Michele", "Fabio", "Samuele", "Alessandro B.", "Alessandro L.", "Claudia", "Davide", "Federico"];
+    for (i=1; i<=elencoContatti.length; i++) {
+      if (elencoContatti[i].includes(lettere)) {
+        $(this).addClass("hidden");
+      } else {
+        console.log("err");
+      }
+    }
+  };
 
 
 });
