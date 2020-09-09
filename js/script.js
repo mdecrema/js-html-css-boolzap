@@ -46,9 +46,16 @@ $(document).ready(function() {
 
   // Funzione orario
   function ora() {
-    var data = data();
-    console.log(data);
-  }
+    var d = new Date();
+    var ora = d.getHours();
+    var minuti = d.getMinutes();
+    var orario = ora+":"+minuti;
+    alert(orario);
+  };
+
+  $(".lente").click(function() {
+    ora();
+  });
 
 
 });
