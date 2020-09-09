@@ -251,6 +251,7 @@
   padding: 10px;
   border: 1px solid transparent;
   border-radius: 5px;
+  list-style: none;
 }
 
 .left {

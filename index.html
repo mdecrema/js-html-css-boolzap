@@ -148,20 +148,21 @@
             <!-- Layout box messaggi -->
           <div class="messaggi">
             <!-- Messaggi arrivati -->
-            <div class="messaggi_arrivati">
-              <div class="box_messaggio bianco hidden left">
-                <p>
-                  Ciao! Tutto bene? fweffewfwfe wfecdscd scs dvs dvsdddd dddddd  sdvsvsnvsdvnsdv
-                </p>
-              </div>
-            </div>
-            <div class="messaggi_inviati">
-              <div class="box_messaggio verde right">
-                <p>
-                  Si, grazie! ..e tu?
-                </p>
-              </div>
-            </div>
+            <ul class="messaggi_arrivati">
+              <li class="box_messaggio bianco left">Ciao! Tutto bene?
+                </li>
+            </ul>
+            <ul class="messaggi_inviati">
+              <li class="box_messaggio verde right">
+
+                  Ciao! Tutto bene? djdsjd
+                  iao! Tutto bene? djdsjd
+                  iao! Tutto bene? djdsjd
+                  iao! Tutto bene? djdsjd
+                  iao! Tutto bene? djdsjd
+                </li>
+            </ul>
+
           </div>
         </div>
         <div class="controller_chat">
@@ -171,13 +172,19 @@
           <input class="txt-mex" id="testo" type="text" name="testo" placeholder="Scrivi un messaggio" />
           <div class="square inline_bl btn-mex">
             <i class="fas fa-microphone micro transform"></i>
-            <i class="fas fa-paper-plane airplane hidden"></i>
+            <i class="fas fa-paper-plane airplane transform hidden"></i>
           </div>
         </div>
         </div>
       </section>
     </div>
   </main>
+
+  <!-- Template -->
+  <div class="template box_messaggio hidden">
+    <li></li>
+  </div>
+  <!-- /Template -->
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

@@ -4,6 +4,9 @@ $(document).ready(function() {
   var nome = $(".nome_contatto h5").text();
   var btnMex = $(".btn-mex");
   var txtMex = $(".txt-mex");
+  var micro = $(".micro");
+  var airplane =$(".airplane");
+  var template = $(".template").clone();
 
   /*$(".btn-cerca").click(function() {
     insiemeContatti.push(nome);
@@ -11,26 +14,41 @@ $(document).ready(function() {
   });*/
 
 btnMex.click(function() {
-  var txt = $(".txt-mex").val();
-  if (attivaBtn() == true) {
-  console.log(txt)
-} else {
-  console.log("err");
-}
+    if (validatore()==true) {
+    var testo = txtMex.val();
+    template.prepend(testo);
+    template.removeClass("hidden");
+    template.addClass("verde");
+    $(".messaggi_inviati").append(template);
+  } else if (validatore()==false){
+    console.log("err");
+  }
 });
 
 
-function attivaBtn() {
+/*btnMex.click(function() {
+  var txt = $(".txt-mex").val();
+  if (validatore() == true) {
+  console.log(txt);
+  micro.addClass("hidden");
+  airplane.removeClass("hidden");
+} else {
+  console.log("err");
+}
+});*/
+
+
+function validatore() {
   var check = false;
-  var micro = $(".micro");
-  var airplane =$(".airplane");
   if (txtMex != "") {
     check = true;
   } else {
     check = false;
   }
   return check;
-}
+};
+
+
 
 
 });
