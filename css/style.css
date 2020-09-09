@@ -234,11 +234,12 @@
 .messaggi {
   width: 100%;
   min-height: 50px;
+  margin: 0 0 0 30px;
 }
 
 .messaggi_arrivati, .messaggi_inviati {
   width: 50%;
-  min-height: 100%;
+  min-height: 50px;
   border: 1px solid blue;
   border-radius: 3px;
   padding: 0 40px 0 20px;

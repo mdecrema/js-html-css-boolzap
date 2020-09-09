@@ -3,52 +3,24 @@ $(document).ready(function() {
   var insiemeContatti = [];
   var nome = $(".nome_contatto h5").text();
   var btnMex = $(".btn-mex");
-  var txtMex = $(".txt-mex");
+  var txtMex = $(".txt-mex").val();
   var micro = $(".micro");
   var airplane =$(".airplane");
-  var template = $(".template").clone();
-
-  /*$(".btn-cerca").click(function() {
-    insiemeContatti.push(nome);
-    console.log(insiemeContatti);
-  });*/
-
-btnMex.click(function() {
-    if (validatore()==true) {
-    var testo = txtMex.val();
-    template.prepend(testo);
-    template.removeClass("hidden");
-    template.addClass("verde");
-    $(".messaggi_inviati").append(template);
-  } else if (validatore()==false){
-    console.log("err");
-  }
-});
 
 
-/*btnMex.click(function() {
-  var txt = $(".txt-mex").val();
-  if (validatore() == true) {
-  console.log(txt);
-  micro.addClass("hidden");
-  airplane.removeClass("hidden");
-} else {
-  console.log("err");
-}
-});*/
+  btnMex.click(function() {
+    inviaMessaggio();
+  });
 
-
-function validatore() {
-  var check = false;
-  if (txtMex != "") {
-    check = true;
-  } else {
-    check = false;
-  }
-  return check;
-};
-
-
-
+  function inviaMessaggio() {
+    var template = $(".template .box_messaggio").clone();
+    if (txtMex != "") {
+      template.find(".txt").text(txtMex);
+      template.removeClass("hidden");
+      $(".elenco_messaggi").append(template);
+    } else {
+      console.log("err");
+    }
+  };
 
 });
