@@ -1,25 +1,24 @@
 $(document).ready(function() {
-  var parola = $(".txt-cerca").val();
-  var insiemeContatti = [];
-  var nome = $(".nome_contatto h5").text();
   var btnMex = $(".btn-mex");
-  var txtMex = $(".txt-mex").val();
-  var micro = $(".micro");
-  var airplane =$(".airplane");
-
 
   btnMex.click(function() {
     inviaMessaggio();
   });
 
+  btnMex.keypress(function(event) {
+    console.log(event.keyCode);
+    if (event.which == 13) {
+      inviaMessaggio();
+    }
+  });
+
   function inviaMessaggio() {
-    var boxMessaggio = $(".box_messaggio").clone();
-    var template = $(".template").clone();
+    var templateMex = $(".template .box_messaggio").clone();
+    var txtMex = $(".txt-mex").val();
     if (txtMex != "") {
-      boxMessaggio.find(".txt").text(txtMex);
-      template.append(boxMessaggio);
-      template.removeClass("hidden");
-      $(".elenco_messaggio").append(template);
+      templateMex.find(".text").text(txtMex);
+      templateMex.addClass("right");
+      $(".elenco_messaggio").append(templateMex);
     } else {
       console.log("err");
     }
