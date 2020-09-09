@@ -44,5 +44,11 @@ $(document).ready(function() {
     $(".elenco_messaggi").append(templateMex);
   };
 
+  // Funzione orario
+  function ora() {
+    var data = data();
+    console.log(data);
+  }
+
 
 });
