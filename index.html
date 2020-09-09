@@ -40,8 +40,8 @@
         </div>
         <!-- Cerca chat -->
         <div class="cerca_chat">
-          <button id="trova_chat" type="button"><i class="fas fa-search lente"></i></button>
-          <input id="nome_contatto" type="text" name="trova_chat" placeholder="Cerca o inizia una nuova chat" />
+          <button class="btn-cerca" id="trova_chat" type="button"><i class="fas fa-search lente"></i></button>
+          <input class="txt-cerca" id="nome_contatto" type="text" name="trova_chat" placeholder="Cerca o inizia una nuova chat" />
         </div>
         <!-- Lista chat -->
         <div class="lista_chat">
@@ -146,14 +146,21 @@
         <!-- Elenco messaggi scambiati -->
         <div class="elenco_messaggi">
             <!-- Layout box messaggi -->
-            <div class="box_messaggio bianco">
-              ciao come stai?
+          <div class="messaggi">
+            <!-- Messaggi arrivati -->
+            <div class="messaggi_arrivati">
+              <div class="box_messaggio bianco hidden left">
+                <p>
+                  Ciao! Tutto bene? fweffewfwfe wfecdscd scs dvs dvsdddd dddddd  sdvsvsnvsdvnsdv
+                </p>
+              </div>
             </div>
-            <div class="box_messaggio verde">
-              ciao! Bene e tu? asjvnskjvndsjkvnkdsjvnkdsjdkjdskvjdsnknjsdvndk
-              asjvnskjvndsjkvnkdsjvnkds jdkjdskvjdsnknjsdvndk
-              asjvnskjvndsjkvnk dsjvnkdsjdkjdskvjdsnknjsdvndk
-              asjvnskjvndsjkvnkdsjvnkdsjdkjdskvjdsnknjsdvndk
+            <div class="messaggi_inviati">
+              <div class="box_messaggio verde right">
+                <p>
+                  Si, grazie! ..e tu?
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -161,11 +168,12 @@
           <div class="square inline_bl">
             <i class="far fa-smile emoticon transform"></i>
           </div>
-          <input id="testo" type="text" name="testo" placeholder="Scrivi un messaggio" />
-          <div class="square inline_bl">
+          <input class="txt-mex" id="testo" type="text" name="testo" placeholder="Scrivi un messaggio" />
+          <div class="square inline_bl btn-mex">
             <i class="fas fa-microphone micro transform"></i>
             <i class="fas fa-paper-plane airplane hidden"></i>
           </div>
+        </div>
         </div>
       </section>
     </div>

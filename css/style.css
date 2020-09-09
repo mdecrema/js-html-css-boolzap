@@ -231,12 +231,34 @@
   overflow-y: scroll;
 }
 
+.messaggi {
+  width: 100%;
+  min-height: 50px;
+}
+
+.messaggi_arrivati, .messaggi_inviati {
+  width: 50%;
+  min-height: 100%;
+  border: 1px solid blue;
+  border-radius: 3px;
+  padding: 0 40px 0 20px;
+  float: left;
+}
+
 /* Layout box messaggio */
 .box_messaggio {
-  max-width: 350px;
+  max-width: 100%;
   padding: 10px;
   border: 1px solid transparent;
   border-radius: 5px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 /* Controller della chat */
