@@ -25,7 +25,10 @@ $(document).ready(function() {
       var templateMex = $(".template .messaggi").clone();
       var txtMex = $(".txt-mex").val();
       if (txtMex != "") {
+        // Trovo gli elementi a cui stampare messaggio e ora
         templateMex.find(".text").text(txtMex);
+        templateMex.find(".ora-chat").text(ora());
+
         templateMex.addClass("right");
         $(".elenco_messaggi").append(templateMex);
         $(".txt-mex").val("");
@@ -50,7 +53,7 @@ $(document).ready(function() {
     var ora = d.getHours();
     var minuti = d.getMinutes();
     var orario = ora+":"+minuti;
-    alert(orario);
+    return orario;
   };
 
   $(".lente").click(function() {

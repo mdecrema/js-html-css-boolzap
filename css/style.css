@@ -239,15 +239,27 @@
 /* Layout box messaggio */
 .box_messaggio {
   max-width: calc(50% - 80px);
-  padding: 10px;
+  padding: 15px;
   border: 1px solid red;
   border-radius: 5px;
   list-style: none;
   margin: 0 0 15px 0;
+  position: relative;
 }
 
 .right {
   justify-content: flex-end;
+}
+
+.ora-chat {
+  width: 30px;
+  height: 15px;
+  font-size: 12px;
+  color: #B1B1B1;
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* Controller della chat */
