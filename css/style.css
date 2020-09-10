@@ -228,31 +228,56 @@
   position: relative;
 }
 
-.menuChat:hover {
+.menuChat.change {
   width: 150px;
   text-align: left;
 }
 
-.menuChat:hover .hide_menu {
+/*.menuChat:hover .hide_menu {
+  visibility: visible;
+}*/
+
+.hide_menu.visible {
   visibility: visible;
 }
 
 .hide_menu {
   width: 180px;
-  border: 1px solid grey;
-  box-shadow: 2px 2px 5px grey;
   position: absolute;
   top: 30px;
   left: 0;
-  background-color: #B1B1B1;
   visibility: hidden;
 }
 
 .hide_menu li {
+  border: 1px solid grey;
+  border-radius: 2px;
   list-style: none;
   padding: 8px 15px;
+  background-color: #B1B1B1;
   color: #fff;
 }
+
+.hide_menu li:hover {
+  background-color: lightgrey;
+}
+
+.l1 {
+  margin-top: -30px;
+}
+
+.l2 {
+  margin-top: -50px;
+}
+
+.l3 {
+  margin-top: -55px;
+}
+
+.l4 {
+  margin-top: -55px
+}
+
 
 .list {
   display: list-item;

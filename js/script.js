@@ -124,10 +124,26 @@ $(document).ready(function() {
 
   // Funzione animazione menu
   $(".menuChat").mouseenter(function() {
-    var counter1 = 0;
-    var counter2 = 0;
-    var counter3 = 0;
-    var counter4 = 0;
+    $(this).addClass("change");
+    $(".hide_menu").addClass("visible");
+    var counter1 = 30;
+    var counter2 = 50;
+    var counter3 = 55;
+    var counter4 = 55;
+    setInterval(function() {
+      if (counter1 == 0 && counter2 == 0 && counter3 == 0 && counter4 == 0) {
+        clearInterval();
+      } else {
+        counter1--;
+        counter2--;
+        counter3--;
+        counter4--;
+        $(".l1").css({marginTop: "-"+counter1+"px"});
+        $(".l2").css({marginTop: "-"+counter2+"px"});
+        $(".l3").css({marginTop: "-"+counter3+"px"});
+        $(".l4").css({marginTop: "-"+counter4+"px"});
+      }
+    }, 10);
   });
 
 
