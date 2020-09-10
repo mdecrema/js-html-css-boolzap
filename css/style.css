@@ -212,16 +212,50 @@
   color: darkgrey;
 }
 
-.info_chat ul {
+.lista_info_chat {
   float: right;
 }
 
-.info_chat ul li {
-  display: inline-block;
+.lista_info_chat li {
   list-style: none;
   color: #B1B1B1;
   padding: 5px;
   line-height: 30px;
+}
+
+/* Menu 3 puntini */
+.menuChat {
+  position: relative;
+}
+
+.menuChat:hover {
+  width: 150px;
+  text-align: left;
+}
+
+.menuChat:hover .hide_menu {
+  visibility: visible;
+}
+
+.hide_menu {
+  width: 180px;
+  border: 1px solid grey;
+  box-shadow: 2px 2px 5px grey;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: #B1B1B1;
+  visibility: hidden;
+}
+
+.hide_menu li {
+  list-style: none;
+  padding: 8px 15px;
+  color: #fff;
+}
+
+.list {
+  display: list-item;
 }
 
 /* STORIA DEI MESSAGGI INVIATI E ARRIVATI */

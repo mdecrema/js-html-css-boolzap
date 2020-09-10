@@ -137,10 +137,17 @@
             <h5>Michele</h5>
             <h6>Ultimo accesso oggi alle 15.40</h6>
           </div>
-          <ul>
-            <li><i class="fas fa-search lente"></i></li>
-            <li><i class="fas fa-paperclip"></i></li>
-            <li><i class="fas fa-ellipsis-v"></i></li>
+          <ul class="lista_info_chat">
+            <li class="inline_bl"><i class="fas fa-search lente"></i></li>
+            <li class="inline_bl"><i class="fas fa-paperclip"></i></li>
+            <li class="inline_bl menuChat"><i class="fas fa-ellipsis-v"></i>
+              <ul class="hide_menu">
+                <li class="list">Visualizza Contatto</li>
+                <li class="list">Sfondo chat</li>
+                <li class="list">Silenzia notifiche</li>
+                <li class="list">Altro</li>
+              </ul>
+            </li>
           </ul>
         </div>
         <!-- CHAT 1 -->
@@ -160,16 +167,14 @@
                 <div class="ora-chat">
                   20:35
                 </div>
-
                 <!-- Menu Messaggio -->
-                  <div class="menuMessaggio hidden">
+                  <div class="menuMessaggio">
                     <ul>
                       <li>Info Messaggio</li>
-                      <li id="cancellaMex">Cancella Messaggio</li>
+                      <li class="cancellaMex">Cancella Messaggio</li>
                     </ul>
                   </div>
                 <!-- /Menu Messaggio -->
-
               </div>
 
             </div>
@@ -327,6 +332,14 @@
           </div>
           <div class="ora-chat">
           </div>
+          <!-- Menu Messaggio -->
+            <div class="menuMessaggio hidden">
+              <ul>
+                <li>Info Messaggio</li>
+                <li class="cancellaMex">Cancella Messaggio</li>
+              </ul>
+            </div>
+          <!-- /Menu Messaggio -->
         </div>
       </div>
     </div>

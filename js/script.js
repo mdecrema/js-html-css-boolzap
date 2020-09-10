@@ -75,14 +75,20 @@ $(document).ready(function() {
     return orario;
   };
 
-  // Funzione apri menu messaggio
-  $(".arrow").click(function() {
-    $(".menuMessaggio").css({display: "block"});
+  $(".arrow").on("click", function() {
+    apriMenuMex();
   });
-
-  $("#cancellaMex").click(function() {
+  // Funzione apri menu messaggio
+  function apriMenuMex() {
+    $(".menuMessaggio").toggle();
+    setTimeout(function() {
+      $(".menuMessaggio").css({display: "none"});
+    }, 3000);
+  };
+ // Funzione cancella messaggio
+  function cancellaMex() {
     $(this).parents(".box_messaggio").remove();
-  })
+  };
 
   // Funzione di ricerca contatti
   $(".txt-cerca").keyup(function() {
