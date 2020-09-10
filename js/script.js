@@ -4,6 +4,8 @@ $(document).ready(function() {
   btnMex.click(function() {
     inviaMessaggio();
   });
+
+
   // Invio
   $(".txt-mex").keypress(function() {
   tastoInvio();
@@ -72,6 +74,11 @@ $(document).ready(function() {
     var orario = ora+":"+minuti;
     return orario;
   };
+
+  // Funzione apri menu messaggio
+  $(".arrow").click(function() {
+    $(".menuMessaggio").css({display: "block"});
+  });
 
   // Funzione di ricerca contatti
   $(".txt-cerca").keyup(function() {
