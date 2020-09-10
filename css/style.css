@@ -79,6 +79,7 @@
   z-index: -1;
 }
 
+
 /* Schermata principale */
 .schermata {
   width: 80vw;
@@ -241,12 +242,13 @@
   min-width: 100px;
   max-width: 50%;
   padding: 10px 15px;
-  border: 1px solid red;
+  border: 1px solid transparent;
   border-radius: 5px;
   list-style: none;
   margin: 0 0 15px 0;
   position: relative;
   display: flex;
+  background-color: #fff;
 }
 
 .right {
@@ -278,4 +280,26 @@
   margin-top: 5px;
   border: 1px solid #fff;
   border-radius: 5px;
+}
+
+/* icone invio messaggio e audio */
+
+.micro, .airplane, .emoticon {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.micro:hover {
+  color: red;
+  font-size: 24px;
+}
+
+.airplane:hover {
+  color: #1385C6;
+  font-size: 24px;
+}
+
+.emoticon:hover {
+  color: orange;
+  font-size: 24px;
 }

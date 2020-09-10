@@ -44,6 +44,7 @@ $(document).ready(function() {
         templateMex.addClass("right");
         $(".elenco_messaggi").append(templateMex);
         $(".txt-mex").val("");
+        // Ottieni una risposta dopo un secondo
         setTimeout(function() {
           risposta();
         }, 1000);
@@ -72,7 +73,6 @@ $(document).ready(function() {
     return orario;
   };
 
-
   // Funzione di ricerca contatti
   $(".txt-cerca").keyup(function() {
     // Prende come valore le lettere passate nell'input
@@ -91,6 +91,15 @@ $(document).ready(function() {
       }
     });
   });
+
+  // Funzione cambia chat
+  $(".prev_contatto").click(function() {
+
+    $(this).css({backgroundColor: "darkgrey"});
+    var num = $(this).attr(".data-contatto");
+    alert(num);
+  });
+
 
 
 });
