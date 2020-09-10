@@ -280,6 +280,7 @@
   line-height: 20px;
   color: darkgrey;
   visibility: hidden;
+  cursor: pointer;
 }
 
 .box_messaggio:hover .arrow {
@@ -306,6 +307,11 @@
   padding: 5px 0;
   text-align: center;
   font-size: 12px;
+  cursor: pointer;
+}
+
+.menuMessaggio ul li:hover {
+  color: grey;
 }
 
 

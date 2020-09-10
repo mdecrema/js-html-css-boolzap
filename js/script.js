@@ -80,6 +80,10 @@ $(document).ready(function() {
     $(".menuMessaggio").css({display: "block"});
   });
 
+  $("#cancellaMex").click(function() {
+    $(this).parents(".box_messaggio").remove();
+  })
+
   // Funzione di ricerca contatti
   $(".txt-cerca").keyup(function() {
     // Prende come valore le lettere passate nell'input
