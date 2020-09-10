@@ -96,7 +96,7 @@ $(document).ready(function() {
   $(".prev_contatto").click(function() {
 
     $(this).css({backgroundColor: "darkgrey"});
-    var num = $(this).attr(".data-contatto");
+    var num = $(this).attr("data-contatto");
     alert(num);
   });
 
