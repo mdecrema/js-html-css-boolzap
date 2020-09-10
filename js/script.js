@@ -101,7 +101,7 @@ $(document).ready(function() {
     var chat = $(".elenco_messaggi.active");
     chat.removeClass("active");
     //var chat = $(".elenco_messaggi").attr("data-chat");
-    var chatActive = $(".elenco_messaggi").attr("data-chat")==1;
+    var chatActive = $(".elenco_messaggi").attr("data-chat", num);
     chatActive.addClass("active");
   });
 
