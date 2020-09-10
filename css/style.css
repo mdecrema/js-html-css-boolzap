@@ -153,7 +153,7 @@
 .lista_chat {
   width: 100%;
   height: calc(100% - 155px);
-  background-color: pink;
+  background-color: #B1B1B1;
   overflow-y: scroll;
 }
 
