@@ -16,6 +16,22 @@ $(document).ready(function() {
     }
   };
 
+  // Funzione che modifica l'icona da microfono a box_messaggio
+  $(".txt-mex").keyup(function() {
+    // Prendo il contenuto del campo input
+    var caratteri = $(".txt-mex").val();
+    // Se il contenuto è diverso da 'vuoto'
+    if (caratteri != "") {
+      // Allora mi verrà mostrata l'icona del messaggio
+      $(".micro").hide();
+      $(".airplane").show();
+    } else {
+      // Altrimenti icona del microfono
+      $(".micro").show();
+      $(".airplane").hide();
+    }
+  });
+
   // Funzione che invia il messaggio
   function inviaMessaggio() {
       var templateMex = $(".template .messaggi").clone();
@@ -25,7 +41,6 @@ $(document).ready(function() {
         templateMex.find(".text").text(txtMex);
         // L'elemento 'ora-chat' richiama la 'funzione ora()'
         templateMex.find(".ora-chat").text(ora());
-
         templateMex.addClass("right");
         $(".elenco_messaggi").append(templateMex);
         $(".txt-mex").val("");
@@ -58,7 +73,7 @@ $(document).ready(function() {
   };
 
 
-  // Funzione di ricerca contatti 
+  // Funzione di ricerca contatti
   $(".txt-cerca").keyup(function() {
     // Prende come valore le lettere passate nell'input
     var lettere = $(this).val().toLowerCase();
