@@ -85,7 +85,7 @@ $(document).ready(function() {
       $(".menuMessaggio").css({display: "none"});
     }, 3000);
   };
- // Funzione cancella messaggio
+  // Funzione cancella messaggio
   function cancellaMex() {
     $(this).parents(".box_messaggio").remove();
   };
@@ -120,6 +120,14 @@ $(document).ready(function() {
     //var chat = $(".elenco_messaggi").attr("data-chat");
     var chatActive = $(".elenco_messaggi").attr("data-chat", num);
     chatActive.addClass("active");
+  });
+
+  // Funzione animazione menu
+  $(".menuChat").mouseenter(function() {
+    var counter1 = 0;
+    var counter2 = 0;
+    var counter3 = 0;
+    var counter4 = 0;
   });
 
 
