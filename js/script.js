@@ -97,7 +97,14 @@ $(document).ready(function() {
 
     $(this).css({backgroundColor: "darkgrey"});
     var num = $(this).attr("data-contatto");
-    alert(num);
+    var chat = $(".elenco_messaggi").attr("data-chat");
+    if (num == 0) {
+      chat = 0;
+      chat.removeClass("hidden");
+    } else if (num == 1) {
+      chat = 1;
+      chat.removeClass("hidden");
+    }
   });
 
 
