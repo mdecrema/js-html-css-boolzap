@@ -97,14 +97,12 @@ $(document).ready(function() {
 
     $(this).css({backgroundColor: "darkgrey"});
     var num = $(this).attr("data-contatto");
-    var chat = $(".elenco_messaggi").attr("data-chat");
-    if (num == 0) {
-      chat = 0;
-      chat.removeClass("hidden");
-    } else if (num == 1) {
-      chat = 1;
-      chat.removeClass("hidden");
-    }
+
+    var chat = $(".elenco_messaggi.active");
+    chat.removeClass("active");
+    //var chat = $(".elenco_messaggi").attr("data-chat");
+    var chatActive = $(".elenco_messaggi").attr("data-chat")==1;
+    chatActive.addClass("active");
   });
 
 

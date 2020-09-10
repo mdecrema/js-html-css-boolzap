@@ -231,6 +231,11 @@
   background-image: url(../img/mine.jpg);
   overflow-y: scroll;
   padding: 0 80px;
+  display: none;
+}
+
+.elenco_messaggi.active {
+  display: block;
 }
 
 .messaggi {
