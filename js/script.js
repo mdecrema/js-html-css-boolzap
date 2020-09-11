@@ -44,7 +44,7 @@ $(document).ready(function() {
         // L'elemento 'ora-chat' richiama la 'funzione ora()'
         templateMex.find(".ora-chat").text(ora());
         templateMex.addClass("right");
-        $(".elenco_messaggi").append(templateMex);
+        $(".elenco_messaggi.active").append(templateMex);
         $(".txt-mex").val("");
         // Ottieni una risposta dopo un secondo
         setTimeout(function() {
@@ -60,7 +60,7 @@ $(document).ready(function() {
     var templateMex = $(".template .messaggi").clone();
     templateMex.find(".text").text("ok");
     templateMex.find(".ora-chat").text(ora());
-    $(".elenco_messaggi").append(templateMex);
+    $(".elenco_messaggi.active").append(templateMex);
   };
 
   // Funzione orario
@@ -75,20 +75,15 @@ $(document).ready(function() {
     return orario;
   };
 
-  $(".arrow").on("click", function() {
-    apriMenuMex();
-  });
+
   // Funzione apri menu messaggio
-  function apriMenuMex() {
-    $(".menuMessaggio").toggle();
-    setTimeout(function() {
-      $(".menuMessaggio").css({display: "none"});
-    }, 3000);
-  };
+ $(document).on("click", ".arrow", function() {
+   $(this).siblings(".menuMessaggio").toggle();
+ });
   // Funzione cancella messaggio
-  function cancellaMex() {
+  $(document).on("click", ".cancellaMex", function() {
     $(this).parents(".box_messaggio").remove();
-  };
+  });
 
   // Funzione di ricerca contatti
   $(".txt-cerca").keyup(function() {
@@ -111,19 +106,18 @@ $(document).ready(function() {
 
   // Funzione cambia chat
   $(".prev_contatto").click(function() {
-
-    $(this).css({backgroundColor: "darkgrey"});
+    $(".prev_contatto").removeClass("darkgrey");
+    $(this).addClass("darkgrey");
     var num = $(this).attr("data-contatto");
 
-    var chat = $(".elenco_messaggi.active");
-    chat.removeClass("active");
+    //chat.removeClass("active");
     //var chat = $(".elenco_messaggi").attr("data-chat");
-    var chatActive = $(".elenco_messaggi").attr("data-chat", num);
-    chatActive.addClass("active");
+    $(".elenco_messaggi").removeClass("active");
+    $(".elenco_messaggi[data-chat="+num+"]").addClass("active");
   });
 
   // Funzione animazione menu
-  $(".menuChat").mouseenter(function() {
+  $(".menuChat").click(function() {
     $(this).addClass("change");
     $(".hide_menu").addClass("visible");
     var counter1 = 30;
@@ -133,6 +127,9 @@ $(document).ready(function() {
     setInterval(function() {
       if (counter1 == 0 && counter2 == 0 && counter3 == 0 && counter4 == 0) {
         clearInterval();
+        setTimeout(function() {
+          $(".hide_menu").removeClass("visible");
+        }, 4000);
       } else {
         counter1--;
         counter2--;
@@ -145,7 +142,6 @@ $(document).ready(function() {
       }
     }, 10);
   });
-
 
 
 });

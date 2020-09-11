@@ -29,10 +29,6 @@
   display: none;
 }
 
-.active {
-  display: block;
-}
-
 .emoticon, .micro, .airplane {
   font-size: 18px;
   color: #6B7376;
@@ -77,6 +73,10 @@
   height: 85%;
   background-color: #DBDBD2 ;
   z-index: -1;
+}
+
+.darkgrey {
+  background-color: darkgrey;
 }
 
 
@@ -226,6 +226,7 @@
 /* Menu 3 puntini */
 .menuChat {
   position: relative;
+  cursor: pointer;
 }
 
 .menuChat.change {
@@ -291,9 +292,11 @@
   overflow-y: scroll;
   padding: 0 80px;
   display: none;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
 }
 
-.elenco_messaggi.active {
+.active {
   display: block;
 }
 
@@ -303,9 +306,9 @@
 
 /* Layout box messaggio */
 .box_messaggio {
-  min-width: 100px;
+  min-width: 80px;
   max-width: 50%;
-  padding: 10px 15px;
+  padding: 10px 10px 10px 15px;
   border: 1px solid transparent;
   border-radius: 5px;
   list-style: none;
@@ -319,9 +322,13 @@
   justify-content: flex-end;
 }
 
+.text {
+  width: calc(100% - 30px);
+}
+
 .ora-chat {
-  width: 25px;
-  height: 35%;
+  width: 30px;
+  height: 15px;
   font-size: 10px;
   color: #B1B1B1;
   position: absolute;
@@ -331,7 +338,7 @@
 
 .arrow {
   width: 30px;
-  height: 65%;
+  height: 30px;
   position: absolute;
   top: 0;
   right: 0;
@@ -365,7 +372,8 @@
   list-style: none;
   padding: 5px 0;
   text-align: center;
-  font-size: 12px;
+  font-family: 'Heebo', sans-serif;
+  font-size: 10px;
   cursor: pointer;
 }
 
