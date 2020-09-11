@@ -109,7 +109,7 @@ $(document).ready(function() {
     $(".prev_contatto").removeClass("darkgrey");
     $(this).addClass("darkgrey");
     var num = $(this).attr("data-contatto");
-    var img = $(this).attr("img", "src");
+    var img = $(this).find(".avatar").attr("src");
     var nomeContatto = $(this).find(".nome_contatto h5").text();
     var ora = $(this).find(".ora h6").text();
 
@@ -117,7 +117,8 @@ $(document).ready(function() {
     //var chat = $(".elenco_messaggi").attr("data-chat");
     $(".elenco_messaggi").removeClass("active");
     $(".elenco_messaggi[data-chat="+num+"]").addClass("active");
-    //$("info_chat img").attr(".avatar[src="+img+"]");
+    //$("info_chat img").attr("src", img);
+    alert(img);
     $(".info_chat").find(".txt h5").text(nomeContatto);
     $(".info_chat").find(".txt time").text(ora);
   });
@@ -149,5 +150,30 @@ $(document).ready(function() {
     }, 5);
   });
 
+  // Geolocalizzazione
+  var success = function( location ) {
+	var latitude = location.coords.latitude;
+	var longitude = location.coords.longitude;
+	console.log( latitude, longitude );
+};
+
+var error = function( message ) {
+	console.log( message );
+};
+
+if( navigator.geolocation ) {
+	navigator.geolocation.getCurrentPosition( success, error );
+}
+
+// Mappa
+function trovaPosizione() {
+  var mapOption = {
+    center: new google.maps.LatLng(40.782710, -73.965310,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    zoom: 13;
+  };
+  var posizione;
+  
+}
 
 });

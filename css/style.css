@@ -248,6 +248,7 @@
   top: 30px;
   left: 0;
   visibility: hidden;
+  z-index: 1;
 }
 
 .hide_menu li {
@@ -278,7 +279,6 @@
 .l4 {
   margin-top: -55px
 }
-
 
 .list {
   display: list-item;
