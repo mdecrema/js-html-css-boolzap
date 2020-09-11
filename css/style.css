@@ -431,6 +431,7 @@
   background-color: grey;
   opacity: 0.9;
   display: none;
+  z-index: 5;
 }
 
 #map {
