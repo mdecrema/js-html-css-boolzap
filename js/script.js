@@ -7,12 +7,12 @@ $(document).ready(function() {
 
 
   // Invio
-  $(".txt-mex").keypress(function() {
-  tastoInvio();
+  $(".txt-mex").keypress(function(event) {
+  tastoInvio(event);
   });
 
   // Evento sul tasto 'Invio'
-  function tastoInvio() {
+  function tastoInvio(event) {
     if (event.which == 13) {
       inviaMessaggio();
     }
@@ -151,29 +151,49 @@ $(document).ready(function() {
   });
 
   // Geolocalizzazione
-  var success = function( location ) {
-	var latitude = location.coords.latitude;
-	var longitude = location.coords.longitude;
-	console.log( latitude, longitude );
+
+  function longitudine(location) {
+	var longitudine = location.coords.longitude;
+	console.log(lng);
 };
+
+function latitudine(location) {
+  var latitudine = location.coords.latitude;
+  console.log(lat);
+}
+
+var lat = latitudine();
+var lng = longitudine();
+
 
 var error = function( message ) {
 	console.log( message );
 };
 
+$(".l4").click(function() {
 if( navigator.geolocation ) {
-	navigator.geolocation.getCurrentPosition( success, error );
+	navigator.geolocation.getCurrentPosition( success );
 }
-
+});
 // Mappa
-function trovaPosizione() {
-  var mapOption = {
-    center: new google.maps.LatLng(40.782710, -73.965310,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    zoom: 13;
-  };
-  var posizione;
-  
-}
 
 });
+
+
+function initMap(lat, lon) {
+  var mapOption = {
+    center: {lat: 40.782710, lng: -73.965310},
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    zoom: 13
+  };
+  var map = new google.maps.Map(document.getElementById("map"), mapOption);
+};
+
+  function loadScript() {
+    var script = document.createElement("script");
+    script.src = 'http://maps.googleapis.com/maps/api/js?AIzaSyC133duXtNjjlqDAeCsz3n-ejNOgtzmBXI&callback=initMap';
+    document.body.appendChild(script);
+  };
+
+
+ //window.onload = loadScript();
