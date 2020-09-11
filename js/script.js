@@ -109,11 +109,17 @@ $(document).ready(function() {
     $(".prev_contatto").removeClass("darkgrey");
     $(this).addClass("darkgrey");
     var num = $(this).attr("data-contatto");
+    var img = $(this).attr("img", "src");
+    var nomeContatto = $(this).find(".nome_contatto h5").text();
+    var ora = $(this).find(".ora h6").text();
 
     //chat.removeClass("active");
     //var chat = $(".elenco_messaggi").attr("data-chat");
     $(".elenco_messaggi").removeClass("active");
     $(".elenco_messaggi[data-chat="+num+"]").addClass("active");
+    //$("info_chat img").attr(".avatar[src="+img+"]");
+    $(".info_chat").find(".txt h5").text(nomeContatto);
+    $(".info_chat").find(".txt time").text(ora);
   });
 
   // Funzione animazione menu
@@ -140,7 +146,7 @@ $(document).ready(function() {
         $(".l3").css({marginTop: "-"+counter3+"px"});
         $(".l4").css({marginTop: "-"+counter4+"px"});
       }
-    }, 10);
+    }, 5);
   });
 
 
