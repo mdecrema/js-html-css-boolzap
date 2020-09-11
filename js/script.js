@@ -5,6 +5,11 @@ $(document).ready(function() {
     inviaMessaggio();
   });
 
+  $(".elenco_messaggi").click(function() {
+    $(".hide_menu").removeClass("visible");
+    $(".menuChat").removeClass("change");
+  });
+
 
   // Invio
   $(".txt-mex").keypress(function(event) {
@@ -154,6 +159,8 @@ $(document).ready(function() {
 // Apri Mappa
 $(".l4").click(function() {
   $(".wrapper-map").css({display: "block"});
+  $(".hide_menu").removeClass("visible");
+  $(".menuChat").removeClass("change");
 });
 // Chiudi Mappa
 $(".chiudi").click(function() {
@@ -165,6 +172,23 @@ $(".annulla").click(function() {
 function chiudiMappa() {
   $(".wrapper-map").css({display: "none"});
 }
+
+// Condivisione della Posizione
+$(".condividi").click(function() {
+  $(".wrapper-map").css({display: "none"});
+  var templatePos = $(".templatePosizione .messaggi").clone();
+
+    templatePos.find(".ora-chat").text(ora());
+    templatePos.addClass("right");
+
+    $(".elenco_messaggi.active").append(templatePos);
+    $(".txt-mex").val("");
+
+    // Ottieni una risposta dopo un secondo
+    setTimeout(function() {
+      risposta();
+    }, 1000);
+})
 
 // FINE CODICE JQUERY
 });
