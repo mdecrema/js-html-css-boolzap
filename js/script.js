@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  loading();
+  //loading();
 
   var btnMex = $(".btn-mex");
   // Click
@@ -158,6 +158,17 @@ $(document).ready(function() {
     }, 5);
   });
 
+// Apertura schermata temi
+$(".l2").click(function() {
+  $(".wrapper-sfondi").fadeIn();
+});
+// Funzione che cambia sfondo
+$(".tema").click(function() {
+  var linkImg = $(this).find(".temaImg").attr("data-sfondo");
+  $(".elenco_messaggi").css("background-image", "url(img/theme"+linkImg+".jpg)");
+  $(".elenco_messaggi").css({backgroundRepeat:"no-repeat", backgroundSize:"700px"});
+  chiudiMappa();
+})
 
 // Apri Mappa
 $(".l4").click(function() {
@@ -174,7 +185,9 @@ $(".annulla").click(function() {
 })
 function chiudiMappa() {
   $(".wrapper-map").css({display: "none"});
+  $(".wrapper-sfondi").fadeOut();
 }
+
 
 // Condivisione della Posizione
 $(".condividi").click(function() {
