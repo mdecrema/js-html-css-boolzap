@@ -429,7 +429,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: grey;
   opacity: 0.9;
   display: block;
   z-index: 5;
@@ -440,24 +440,34 @@
   height: 80vh;
   margin-top: 10vh;
   margin-left: 10vw;
-  border: 1px solid blue;
 }
 
 .row {
   width: 100%;
   height: 50%;
-  border-bottom: 1px solid green;
+}
+
+.row.marginTop {
+  margin-top: 20px;
 }
 
 .tema {
   width: 150px;
+  height: 230px;
+  border: 5px solid darkgrey;
+  border-radius: 5px;
   overflow: hidden;
-  margin: 0 100px;
+  margin: 0px 100px;
+  cursor: pointer;
 }
 
 .tema img {
   width: 150px;
-  height: 250px;
+  height: 230px;
+}
+
+.tema:hover img {
+  opacity: 0.3;
 }
 
 /* Mappa */
