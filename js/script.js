@@ -195,7 +195,7 @@ $(".condividi").click(function() {
 
 // Animazione caricamento pagina
 
-function loading() {
+/*function loading() {
   var counter = 1;
   setInterval(function() {
     if (counter==1) {
@@ -231,7 +231,7 @@ function loading() {
   setTimeout(function() {
     $(".wrapper-aperturaPagina").fadeOut();
   }, 4000);
-}
+}*/
 
 
 // FINE CODICE JQUERY
