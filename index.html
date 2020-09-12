@@ -398,13 +398,23 @@
           </div>
           <input class="txt-mex" id="testo" type="text" name="testo" placeholder="Scrivi un messaggio" />
           <div class="square inline_bl btn-mex">
-            <i class="fas fa-microphone micro transform"></i>
+            <i id="record" class="fas fa-microphone micro transform"></i>
             <i class="fas fa-paper-plane airplane transform hidden"></i>
           </div>
         </div>
 
       </section>
     </div>
+
+    <!-- RECORDING AUDIO (PROVA)
+    <div class="holder">
+            <div data-role="controls">
+                <button>Record</button>
+            </div>
+            <div data-role="recordings"></div>
+            <audio class="out" controls src=""></audio>
+        </div>
+    -->
   </main>
 
   <!-- Template -->
@@ -457,8 +467,27 @@
     </div>
   </div>
 
+  <!-- PARTI NASCOSTE -->
+  <!-- Schermata inziale - Apertura pagina -->
+  <div id="schermataInziale" class="wrapper-aperturaPagina">
+    <div class="cerchioEsterno transform">
+      <div class="cerchioInterno transform">
+      <div class="rettangolo1"></div>
+      <div class="rettangolo2"></div>
+      <div class="rettangolo3"></div>
+      <div class="rettangolo4"></div>
+      <div class="rettangolo5"></div>
+      <div class="rettangolo6"></div>
+      <div class="rettangolo7"></div>
+    <div id="logo" class="transform">
+      <img class="whatsappLogo" src="img/whatsappLogo.jpeg" />
+    </div>
+  </div>
+</div>
+  </div>
+
   <!-- Mappa/Posizione -->
-  <div id="schermata" class="wrapper-map">
+  <div id="schermataMappa" class="wrapper-map">
     <div id="map" class="transform">
     </div>
     <div class="chiudi">
@@ -472,6 +501,7 @@
     </div>
   </div>
   <!-- /Mappa/Posizione -->
+
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

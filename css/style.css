@@ -421,6 +421,7 @@
   font-size: 24px;
 }
 
+/* PARTI NASCOSTE */
 /* Mappa */
 .wrapper-map {
   position: absolute;
@@ -509,4 +510,141 @@
   top: 50%;
   left: 50%;
   overflow: hidden;
+}
+
+/* Schermata iniziale */
+#logo {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.whatsappLogo {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper-aperturaPagina {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.8;
+  display: block;
+  z-index: 5;
+}
+
+.cerchioEsterno {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: #1A9F10;
+  z-index: 1;
+}
+
+.cerchioInterno {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 4px solid #fff;
+  border-radius: 100%;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.rettangolo1 {
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+
+  top: 0px;
+  left: 155px;
+  transform: rotate(43deg);
+  display: none;
+  z-index: 7;
+}
+
+.rettangolo2 {
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 103px;
+  left: 200px;
+  transform: rotate(90deg);
+  display: none;
+  z-index: -1;
+}
+
+.rettangolo3 {
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 200px;
+  left: 155px;
+  transform: rotate(140deg);
+  display: none;
+  z-index: -1;
+}
+
+.rettangolo4 {
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 230px;
+  left: 50px;
+  transform: rotate(8deg);
+  display: none;
+  z-index: -1;
+}
+
+.rettangolo5 {
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 170px;
+  left: -45px;
+  transform: rotate(240deg);
+  display: none;
+  z-index: -1;
+}
+
+.rettangolo6 {
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 60px;
+  left: -55px;
+  transform: rotate(105deg);
+  display: none;
+  z-index: -1;
+}
+
+.rettangolo7 {
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: -25px;
+  left: 30px;
+  transform: rotate(340deg);
+  display: none;
+  z-index: -1;
 }

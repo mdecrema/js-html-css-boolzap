@@ -1,6 +1,9 @@
 $(document).ready(function() {
+  loading();
+
   var btnMex = $(".btn-mex");
   // Click
+
   btnMex.click(function() {
     inviaMessaggio();
   });
@@ -189,6 +192,44 @@ $(".condividi").click(function() {
       risposta();
     }, 1000);
 })
+
+// Animazione caricamento pagina
+
+function loading() {
+  var counter = 1;
+  setInterval(function() {
+    if (counter==1) {
+      $(".rettangolo1").css({display: "none"});
+      $(".rettangolo2").css({display: "block"});
+      counter=2;
+    } else if (counter==2) {
+      $(".rettangolo2").css({display: "none"});
+      $(".rettangolo3").css({display: "block"});
+      counter=3;
+    } else if (counter==3) {
+      $(".rettangolo3").css({display: "none"});
+      $(".rettangolo4").css({display: "block"});
+      counter=4;
+    } else if (counter==4) {
+      $(".rettangolo4").css({display: "none"});
+      $(".rettangolo5").css({display: "block"});
+      counter=5;
+    } else if (counter==5) {
+      $(".rettangolo5").css({display: "none"});
+      $(".rettangolo6").css({display: "block"});
+      counter=6;
+    } else if (counter==6) {
+      $(".rettangolo6").css({display: "none"});
+      $(".rettangolo7").css({display: "block"});
+      counter=7;
+    } else if (counter==7) {
+      $(".rettangolo7").css({display: "none"});
+      $(".rettangolo1").css({display: "block"});
+      counter=1;
+    }
+  },300);
+}
+
 
 // FINE CODICE JQUERY
 });
