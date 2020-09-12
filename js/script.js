@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  //loading();
+  loading();
 
   var btnMex = $(".btn-mex");
   // Click
@@ -165,9 +165,15 @@ $(".l2").click(function() {
 // Funzione che cambia sfondo
 $(".tema").click(function() {
   var linkImg = $(this).find(".temaImg").attr("data-sfondo");
+  if (linkImg == 0) {
+    $(".elenco_messaggi").css("background-image", "url(img/theme0.jpg)");
+    $(".elenco_messaggi").css({backgroundRepeat:"repeat"});
+    chiudiMappa();
+  } else {
   $(".elenco_messaggi").css("background-image", "url(img/theme"+linkImg+".jpg)");
   $(".elenco_messaggi").css({backgroundRepeat:"no-repeat", backgroundSize:"700px"});
   chiudiMappa();
+}
 })
 
 // Apri Mappa
@@ -208,8 +214,8 @@ $(".condividi").click(function() {
 
 // Animazione caricamento pagina
 
-/*function loading() {
-  var counter = 1;
+function loading() {
+  var counter = 7;
   setInterval(function() {
     if (counter==1) {
       $(".rettangolo1").css({display: "none"});
@@ -244,7 +250,7 @@ $(".condividi").click(function() {
   setTimeout(function() {
     $(".wrapper-aperturaPagina").fadeOut();
   }, 4000);
-}*/
+}
 
 
 // FINE CODICE JQUERY

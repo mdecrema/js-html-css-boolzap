@@ -288,7 +288,7 @@
 .elenco_messaggi {
   width: 100%;
   height: calc(100% - 100px);
-  background-image: url(../img/mine.jpg);
+  background-image: url(../img/theme0.jpg);
   background-position: center;
   overflow-y: scroll;
   padding: 0 80px;
@@ -588,7 +588,7 @@
   height: 100%;
   background-color: #fff;
   opacity: 0.8;
-  display: none;
+  display: block;
   z-index: 5;
 }
 
