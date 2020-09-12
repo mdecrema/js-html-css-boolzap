@@ -550,6 +550,7 @@
   overflow: hidden;
   background-color: #1A9F10;
   z-index: 1;
+  box-shadow: 4px 4px 6px grey;
 }
 
 .cerchioInterno {
@@ -647,4 +648,25 @@
   transform: rotate(340deg);
   display: none;
   z-index: -1;
+}
+
+.nomeProgramma {
+  width: 400px;
+  height: 100px;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+}
+
+.nomeProgramma h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 50px;
+  text-shadow: 2px 4px 4px /*#1A9F10 #3EB82B */ grey;
+  color: #1A9F10/*#00A356*/;
+}
+
+.nomeProgramma h3 {
+  color: grey;
 }

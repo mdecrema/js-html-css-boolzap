@@ -227,7 +227,10 @@ function loading() {
       $(".rettangolo1").css({display: "block"});
       counter=1;
     }
-  },300);
+  }, 300);
+  setTimeout(function() {
+    $(".wrapper-aperturaPagina").fadeOut();
+  }, 4000);
 }
 
 
