@@ -11,6 +11,9 @@ $(document).ready(function() {
   $(".elenco_messaggi").click(function() {
     $(".hide_menu").removeClass("visible");
     $(".menuChat").removeClass("change");
+    $(".cercaMex").css({display: "none"});
+    $(".lente2").removeClass("change");
+    chatOriginale();
   });
 
 
@@ -87,7 +90,7 @@ $(document).ready(function() {
 
   //Scroll down automaticamente all'invio del nuovo Messaggio
   function scrollDown() {
-    // Variabile che mi ritorna l'altezza della chat 
+    // Variabile che mi ritorna l'altezza della chat
   var chatHeight = $(".elenco_messaggi.active").prop("scrollHeight");
   $(".elenco_messaggi").scrollTop(chatHeight);
   }
@@ -102,7 +105,7 @@ $(document).ready(function() {
   });
 
   // Funzione di ricerca contatti
-  $(".txt-cerca").keyup(function() {
+  $(".txt-cerca").keyup(function ricercaContatto() {
     // Prende come valore le lettere passate nell'input
     var lettere = $(this).val().toLowerCase();
     var contatti = $(".nome_contatto h5");
@@ -128,13 +131,9 @@ $(document).ready(function() {
     var img = $(this).find(".avatar").attr("src");
     var nomeContatto = $(this).find(".nome_contatto h5").text();
     var ora = $(this).find(".ora h6").text();
-
-    //chat.removeClass("active");
-    //var chat = $(".elenco_messaggi").attr("data-chat");
     $(".elenco_messaggi").removeClass("active");
     $(".elenco_messaggi[data-chat="+num+"]").addClass("active");
     $(".info_chat img").attr("src", img);
-    //alert(img);
     $(".info_chat").find(".txt h5").text(nomeContatto);
     $(".info_chat").find(".txt time").text(ora);
   });
@@ -143,6 +142,9 @@ $(document).ready(function() {
   $(".menuChat").click(function() {
     $(this).addClass("change");
     $(".hide_menu").addClass("visible");
+    $(".cercaMex").css({display: "none"});
+    $(".lente2").removeClass("change");
+    chatOriginale();
     var counter1 = 30;
     var counter2 = 50;
     var counter3 = 55;
@@ -163,7 +165,7 @@ $(document).ready(function() {
         $(".l3").css({marginTop: "-"+counter3+"px"});
         $(".l4").css({marginTop: "-"+counter4+"px"});
       }
-    }, 5);
+    }, 10);
   });
 
 // Apertura schermata temi
@@ -184,11 +186,46 @@ $(".tema").click(function() {
 }
 })
 
+// Input ricerca messaggi
+$(".lente2").click(function() {
+  $(this).addClass("change");
+  $(".cercaMex").css({display: "block"});
+  $(".hide_menu").removeClass("visible");
+  $(".menuChat").removeClass("change");
+})
+// Funzione ricerca messaggio all'interna della chat
+$(".cercaMex").keyup(function ricercaMessaggio() {
+  // Prende come valore le lettere passate nell'input
+  var lettere = $(this).val().toLowerCase();
+  var insiemeMex = $(".elenco_messaggi.active").find(".box_messaggio");
+  var mex = insiemeMex.find(".text");
+  // 'Each' esegue un ciclo sui vari messaggi
+  mex.each(function() {
+    var contenuto = $(this).text().toLowerCase();
+    // Se i messaggi analizzati contengono le lettere passate
+    if (contenuto.includes(lettere) == true) {
+      // Allora rimaranno visibili
+      $(this).parents(".box_messaggio").show();
+    } else {
+      // Altrimenti veranno nascosti
+      $(this).parents(".box_messaggio").hide();
+    }
+  });
+});
+
+// Funzione che ritorna tutti i messaggi (origine)
+function chatOriginale() {
+  var insiemeMex = $(".elenco_messaggi.active").find(".box_messaggio");
+  var mex = insiemeMex.find(".text");
+  mex.parents(".box_messaggio").show();
+}
+
 // Apri Mappa
 $(".l4").click(function() {
   $(".wrapper-map").css({display: "block"});
   $(".hide_menu").removeClass("visible");
   $(".menuChat").removeClass("change");
+
 });
 // Chiudi Mappa
 $(".chiudi").click(function() {
@@ -201,7 +238,6 @@ function chiudiMappa() {
   $(".wrapper-map").css({display: "none"});
   $(".wrapper-sfondi").fadeOut();
 }
-
 
 // Condivisione della Posizione
 $(".condividi").click(function() {
@@ -221,7 +257,6 @@ $(".condividi").click(function() {
 })
 
 // Animazione caricamento pagina
-
 function loading() {
   var counter = 7;
   setInterval(function() {
@@ -257,9 +292,8 @@ function loading() {
   }, 300);
   setTimeout(function() {
     $(".wrapper-aperturaPagina").fadeOut();
-  }, 4000);
+  }, 100);
 }
-
 
 // FINE CODICE JQUERY
 });
