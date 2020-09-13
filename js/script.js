@@ -54,9 +54,11 @@ $(document).ready(function() {
         templateMex.addClass("right");
         $(".elenco_messaggi.active").append(templateMex);
         $(".txt-mex").val("");
+        scrollDown();
         // Ottieni una risposta dopo un secondo
         setTimeout(function() {
           risposta();
+          scrollDown();
         }, 1000);
       } else {
         console.log("err");
@@ -83,6 +85,12 @@ $(document).ready(function() {
     return orario;
   };
 
+  //Scroll down automaticamente all'invio del nuovo Messaggio
+  function scrollDown() {
+    // Variabile che mi ritorna l'altezza della chat 
+  var chatHeight = $(".elenco_messaggi.active").prop("scrollHeight");
+  $(".elenco_messaggi").scrollTop(chatHeight);
+  }
 
   // Funzione apri menu messaggio
  $(document).on("click", ".arrow", function() {
@@ -125,8 +133,8 @@ $(document).ready(function() {
     //var chat = $(".elenco_messaggi").attr("data-chat");
     $(".elenco_messaggi").removeClass("active");
     $(".elenco_messaggi[data-chat="+num+"]").addClass("active");
-    //$("info_chat img").attr("src", img);
-    alert(img);
+    $(".info_chat img").attr("src", img);
+    //alert(img);
     $(".info_chat").find(".txt h5").text(nomeContatto);
     $(".info_chat").find(".txt time").text(ora);
   });
