@@ -292,7 +292,7 @@ function loading() {
   }, 300);
   setTimeout(function() {
     $(".wrapper-aperturaPagina").fadeOut();
-  }, 100);
+  }, 4000);
 }
 
 // FINE CODICE JQUERY

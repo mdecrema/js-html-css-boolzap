@@ -166,6 +166,10 @@
   padding: 10px 10px;
 }
 
+.prev_contatto.darkgrey {
+  background-color: darkgrey;
+}
+
 .prev_contatto:hover {
   background-color: #E9EBEB;
 }
